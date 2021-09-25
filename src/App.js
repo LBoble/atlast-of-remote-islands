@@ -15,9 +15,7 @@ function App() {
       <div className="container">
         <h2 className="section-title">Islands</h2>
         <ul className="cards">
-          
-          <Card />
-          
+          {data.islands.map(island => <Card island={island} />)}
         </ul>
       </div>
     </div>
