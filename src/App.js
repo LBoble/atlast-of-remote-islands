@@ -13,9 +13,25 @@ function App() {
       </div>
       
       <div className="container">
-        <h2 className="section-title">Islands</h2>
+        <h2 className="section-title">Arctic Ocean Islands</h2>
         <ul className="cards">
-          {data.islands.map(island => <Card island={island} />)}
+          {data.islands.filter(island => island.region === "Arctic Ocean").map(island => <Card island={island}/>)}
+        </ul>
+        <h2 className="section-title">Atlantic Ocean Islands</h2>
+        <ul className="cards">
+          {data.islands.filter(island => island.region === "Atlantic Ocean").map(island => <Card island={island}/>)}
+        </ul>
+        <h2 className="section-title">Indian Ocean Islands</h2>
+        <ul className="cards">
+          {data.islands.filter(island => island.region === "Indian Ocean").map(island => <Card island={island}/>)}
+        </ul>
+        <h2 className="section-title">Pacific Ocean Islands</h2>
+        <ul className="cards">
+          {data.islands.filter(island => island.region === "Pacific Ocean").map(island => <Card island={island}/>)}
+        </ul>
+        <h2 className="section-title">Antarctic Ocean Islands</h2>
+        <ul className="cards">
+          {data.islands.filter(island => island.region === "Antarctic Ocean").map(island => <Card island={island}/>)}
         </ul>
       </div>
     </div>
